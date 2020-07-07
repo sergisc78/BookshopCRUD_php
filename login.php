@@ -45,13 +45,18 @@
 
 
         if ($count != 0) { // IF USERNAME AND EMAIL EXIST
+
+            session_start(); // S´INICIA LA SESSIÓ EN LA QUAL USER ÉS IGUAL A $POST['USER']
+
+            $_SESSION["user"] = $_POST["user"];
+
             echo "<div class='alert alert-success' role='alert'>
                   <button type='button' class='close' data-dismiss='alert'>&times;</button>
                   <h3 id='message'>Welcome back !</h3>
                   </div>
                   <footer><i class='fas fa-copyright'></i> 2020 Sergi Sánchez </footer>";
 
-            header("refresh:5;url=index.html");
+            header("refresh:5;url=opcions.php");
 
         } else { // ELSE, USER DOESN´T EXIST OR INCORRECT DATA
 

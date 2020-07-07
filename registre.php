@@ -69,11 +69,11 @@
 
       echo "<div class='alert alert-success' role='alert'>
       <button type='button' class='close' data-dismiss='alert'>&times;</button>
-        <h3 id='message'>Thank you for the registration. We´ll redirect you to login page soon !</h3>
+        <h3 id='message'>Thank you for the registration <strong> $user </strong>. We´ll redirect you to login page soon !</h3>
       </div>
       <footer><i class='fas fa-copyright'></i> 2020 Sergi Sánchez </footer>";
 
-      header("refresh:5;url=index.html");
+      header("refresh:10;url=login.html");
     }
   }
 

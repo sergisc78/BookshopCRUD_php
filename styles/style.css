@@ -91,4 +91,28 @@ body #message {
   font-size: 40px;
   text-align: center;
 }
+
+body #sessio {
+  float: right;
+  margin-top: 15px;
+  margin-right: 25px;
+}
+
+body section #opcions {
+  color: whitesmoke;
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  margin-top: 25px;
+}
+
+body section .mx-auto {
+  margin-top: 80px;
+}
+
+body section #botoOpcions {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 25px;
+}
 /*# sourceMappingURL=style.css.map */

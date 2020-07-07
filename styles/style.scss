@@ -1,7 +1,7 @@
 $colorGradient1: #c04848;
 $colorGradient2: #480048;
 $colorLletra: whitesmoke;
-$colorMessage:black;
+$colorMessage: black;
 $lletra: "Shadows Into Light", cursive;
 
 * {
@@ -79,11 +79,37 @@ body {
   }
   // REGISTRE.PHP
   #message {
-    margin:20px;
+    margin: 20px;
     color: $colorMessage;
     font-family: $lletra;
     font-size: 40px;
     text-align: center;
   }
-  // LOGIN.HTML
+
+  // OPCIONS.PHP
+
+  #sessio {
+    float: right;
+    margin-top: 15px;
+    margin-right: 25px;
+  }
+
+  section {
+    #opcions {
+      color: $colorLletra;
+      font-family: $lletra;
+      text-align: center;
+      margin-top: 25px;
+    }
+    .mx-auto {
+      margin-top: 80px;
+    }
+    #botoOpcions {
+      text-decoration: none;
+      color: $colorLletra;
+      font-family: $lletra;
+      font-size: 25px;
+      
+    }
+  }
 }
