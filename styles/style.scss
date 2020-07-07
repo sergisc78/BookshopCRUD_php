@@ -1,0 +1,89 @@
+$colorGradient1: #c04848;
+$colorGradient2: #480048;
+$colorLletra: whitesmoke;
+$colorMessage:black;
+$lletra: "Shadows Into Light", cursive;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(-90deg, $colorGradient2, $colorGradient1);
+  .card {
+    background: linear-gradient(-90deg, $colorGradient2, $colorGradient1);
+    color: $colorLletra;
+    font-family: $lletra;
+  }
+  nav {
+    float: right;
+    .fas {
+      color: $colorLletra;
+      font-size: 30px;
+      margin-right: 40px;
+    }
+  }
+  .paragraf {
+    text-align: center;
+    color: $colorLletra;
+    font-family: $lletra;
+    margin-top: 110px;
+    font-size: 45px;
+  }
+  .xarxes {
+    font-size: 30px;
+    margin-left: 580px;
+    margin-top: 100px;
+    a {
+      color: black;
+    }
+  }
+  footer {
+    font-family: $lletra;
+    font-size: 30px;
+    text-align: center;
+    color: $colorLletra;
+    margin-top: 130px;
+  }
+
+  // REGISTRE.HTML
+
+  h3 {
+    color: $colorLletra;
+    font-family: $lletra;
+    font-size: 40px;
+    text-align: center;
+  }
+  .form-group {
+    margin-top: 60px;
+    margin-left: 480px;
+
+    label {
+      color: $colorLletra;
+      font-family: $lletra;
+      font-size: 30px;
+    }
+    input {
+      width: 40%;
+      color: black;
+    }
+    .invalid-feedback {
+      color: yellow;
+      font-family: $lletra;
+      font-size: 25px;
+    }
+    button {
+      width: 40%;
+    }
+  }
+  // REGISTRE.PHP
+  #message {
+    margin:20px;
+    color: $colorMessage;
+    font-family: $lletra;
+    font-size: 40px;
+    text-align: center;
+  }
+  // LOGIN.HTML
+}
