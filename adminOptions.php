@@ -9,6 +9,9 @@
     <!--BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
+   
+
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css" />
 
@@ -27,7 +30,7 @@
 
     session_start();
 
-    if (!isset($_SESSION['user'])) { // SINO HA FET LOGIN NO ES POT ENTRAR A L´APLICACIÓ
+      if (!isset($_SESSION['user'])) { // SINO HA FET LOGIN NO ES POT ENTRAR A L´APLICACIÓ
 
         header("location:login.html");
     }
@@ -55,8 +58,8 @@
             <div class="opcions">
                 <div class="row">
                     <div class="mx-auto">
-                        <a href="insert.html" type="button" id="botoOpcions" class="btn btn-link btn-lg">Write a review</a>
-                        <a href="consult.php" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult books reviews</a>
+                        <a href="insertar.html" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult users</a>
+                        <a href="consulta.html" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult reviews</a>
                     </div>
                 </div>
             </div>

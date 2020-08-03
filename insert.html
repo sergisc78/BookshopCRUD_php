@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--BOOTSTRAP CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!--GOOGLE FONTS-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="src/fontawesome-free-5.13.1-web/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-body">
+        <h1>Bookshop</h1>
+      </div>
+    </div>
+    <nav class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="opcions.php" title="Back to index"
+          ><i class="fas fa-arrow-left"></i
+        ></a>
+      </li>
+    </nav>
+
+    <h3>Enter a book and a review</h3>
+    <form class="needs-validation" action="insert.php" method="POST" novalidate>
+      <div class="form-group">
+        <label for="validationCustom01">Author</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom01"
+          name="author"
+          placeholder="Enter the book´s author"
+          required
+        /><br />
+        <div class="invalid-feedback">
+          Please enter an author.
+        </div>
+
+        <label for="validationCustom02">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom02"
+          name="title"
+          placeholder="Enter a book´s title"
+          required
+        /><br />
+        <div class="invalid-feedback">
+          Please enter a title.
+        </div>
+
+        <label for="validationCustom03">Release year</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom03"
+          name="year"
+          placeholder="Enter a release year"
+          required
+        /><br />
+        <div class="invalid-feedback">
+          Please enter a year.
+        </div>
+
+        <label for="validationCustom04">Rating (from 1 to 10)</label><br />
+        <select name="rating" id="rating">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+
+        <br />
+        <div class="invalid-feedback">
+          Please enter a rating.
+        </div>
+
+        <label for="validationCustom05">Write a short review</label><br />
+        <textarea rows="5" cols="35" name="review" required> </textarea>
+        <br />
+        <div class="invalid-feedback">
+          Please write a review.
+        </div>
+
+        <br />
+        <button class="btn btn-info" type="submit" name="send">Send</button>
+      </div>
+    </form>
+
+    <footer><i class="fas fa-copyright"></i> 2020 Sergi Sánchez</footer>
+
+    <!-- CREATE table reviews(
+id int(244) AUTO_INCREMENT PRIMARY KEY,
+author varchar (25) not null,
+title varchar (30) not null,
+year int (4) not null,
+rating int (10) not null,
+review varchar (250) not null     
+)-->
+
+    <!--BOOTSTRAP JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
