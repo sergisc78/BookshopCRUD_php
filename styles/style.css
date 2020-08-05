@@ -115,4 +115,38 @@ body section #botoOpcions {
   font-family: "Shadows Into Light", cursive;
   font-size: 25px;
 }
+
+body table,
+body th,
+body td {
+  border: hidden;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+body th,
+body td {
+  padding: 15px;
+}
+
+body th {
+  text-align: left;
+  font-size: 40px;
+  color: black;
+  font-family: "Shadows Into Light", cursive;
+}
+
+body td {
+  font-size: 25px;
+  color: whitesmoke;
+  font-family: "Shadows Into Light", cursive;
+}
+
+body nav {
+  margin: auto;
+}
+
+body .alert {
+  margin: auto;
+}
 /*# sourceMappingURL=style.css.map */

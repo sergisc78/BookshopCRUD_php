@@ -109,7 +109,39 @@ body {
       color: $colorLletra;
       font-family: $lletra;
       font-size: 25px;
-      
     }
   }
+  // CONSULT.PHP
+
+  table,
+  th,
+  td {
+    border: hidden;
+    border-collapse: collapse;
+    margin: auto;
+  }
+  th,
+  td {
+    padding: 15px;
+  }
+  th {
+    text-align: left;
+    font-size: 40px;
+    color: black;
+    font-family: $lletra;
+  }
+  td {
+    font-size: 25px;
+    color: $colorLletra;
+    font-family: $lletra;
+  }
+  nav {
+    margin: auto;
+  }
+
+  //DeleteUser.php
+  .alert{
+    margin:auto;
+  }
+  
 }

@@ -30,33 +30,34 @@
     try {
         include('config.php');
 
-        $sql_consult = "SELECT * FROM reviews";
+        $sql_consultUsers = "SELECT * FROM users";
 
-        $resultat = $connection->prepare($sql_consult);
+        $resultat = $connection->prepare($sql_consultUsers);
 
         $resultat->execute();
 
-        $books = $resultat->rowCount();
+        $users = $resultat->rowCount();
 
-        if ($books != 0) {
+        if ($users != 0) {
 
             echo "<table>";
-            echo "<tr><th>Register</th><th>ID</th><th>Author</th><th>Title</th>";
+            echo "<tr><th>Register</th><th>ID</th><th>Username</th><th>Email</th><th>Password</th>";
             $i = 0;
 
             foreach ($resultat as $resultats) {
                 $i++;
                 echo "<tr><td>" . $i . "</td>
                 <td>" . $resultats['id'] . " </td>
-                <td>" . $resultats['author'] . " </td>
-                <td>" . $resultats['title'] . "</td>
+                <td>" . $resultats['username'] . " </td>
+                <td>" . $resultats['mail'] . " </td>
+                <td>" . $resultats['password'] . "</td>
                 
-                <td><a href='viewReview.php?id=$resultats[id] & author=$resultats[author] & title=$resultats[title] & year=$resultats[year] & rating=$resultats[rating] & review=$resultats[review]' type='button' class='btn btn-info btn-sm'>View review</a></td>";
+                <td><a href='deleteUser.php?id=$resultats[id] & username=$resultats[username] & mail=$resultats[mail] & password=$resultats[password] type='button' class='btn btn-info btn-sm'>Delete user</a></td>";
             }
 
             echo "<nav class='nav'>
                     <li class='nav-item'>
-                     <a class='nav-link active' href='opcions.php' title='Back to options'>
+                     <a class='nav-link active' href='adminOptions.php' title='Back to options'>
                      <i class='fas fa-arrow-left'></i></a>
                     </li>
                   </nav>";
@@ -69,7 +70,7 @@
                  </div>
                  <footer><i class='fas fa-copyright'></i> 2020 Sergi Sánchez </footer>";
 
-            header("refresh:5;url=insert.html");
+            header("refresh:5;url=adminOptions.php");
         }
     } catch (Exception $e) {
 
@@ -77,15 +78,10 @@
         echo " Hi ha un error  a la línia" . $e->getLine();
     }
 
+//& username=$resultats[username] & mail=$resultats[mail] & password=$resultats[password]'
+
 
     ?>
-
-
-
-    <!--BOOTSTRAP JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </body>
 

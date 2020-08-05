@@ -58,8 +58,8 @@
             <div class="opcions">
                 <div class="row">
                     <div class="mx-auto">
-                        <a href="insertar.html" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult users</a>
-                        <a href="consulta.html" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult reviews</a>
+                        <a href="adminUsers.php" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult users</a>
+                        <a href="consultReview.php" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult reviews</a>
                     </div>
                 </div>
             </div>
