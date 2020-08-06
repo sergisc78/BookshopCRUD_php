@@ -30,7 +30,7 @@
     try {
         include('config.php');
 
-        $sql_consultUsers = "SELECT * FROM users";
+        $sql_consultUsers = "SELECT * FROM reviews";
 
         $resultat = $connection->prepare($sql_consultUsers);
 
@@ -41,18 +41,20 @@
         if ($users != 0) {
 
             echo "<table>";
-            echo "<tr><th>Register</th><th>ID</th><th>Username</th><th>Email</th><th>Password</th>";
+            echo "<tr><th>Register</th><th>ID</th><th>Author</th><th>Title</th><th>Year</th><th>Rating</th><th>Review</th>";
             $i = 0;
 
             foreach ($resultat as $resultats) {
                 $i++;
                 echo "<tr><td>" . $i . "</td>
                 <td>" . $resultats['id'] . " </td>
-                <td>" . $resultats['username'] . " </td>
-                <td>" . $resultats['mail'] . " </td>
-                <td>" . $resultats['password'] . "</td>
+                <td>" . $resultats['author'] . " </td>
+                <td>" . $resultats['title'] . " </td>
+                <td>" . $resultats['year'] . " </td>
+                <td>" . $resultats['rating'] . "</td>
+                <td>" . $resultats['review'] . "</td>
                 
-                <td><a href='deleteUser.php?id=$resultats[id] & username=$resultats[username] & mail=$resultats[mail] & password=$resultats[password] type='button' class='btn btn-info btn-sm'>Delete user</a></td>";
+                <td><a href='deleteReview.php?id=$resultats[id] & author=$resultats[author] & mail=$resultats[title] & password=$resultats[year] & password=$resultats[rating] & password=$resultats[review] type='button' class='btn btn-info btn-sm'>Delete review</a></td>";
             }
 
             echo "<nav class='nav'>

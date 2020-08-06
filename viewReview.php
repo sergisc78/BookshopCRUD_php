@@ -52,27 +52,27 @@
     <div class="form-group">
         <label for="id">ID</label>
         <input type="text" class="form-control" id="id" name="id" readonly value="<?php echo $_GET['id']; ?>" />
-    </div>
-    <div class="form-group">
+        <br>
+
         <label for="author">Author</label>
         <input type="text" class="form-control" id="author" name="author" value="<?php echo $_GET['author']; ?>" />
-    </div>
-    <div class="form-group">
+        <br>
+
         <label for="titol">Title</label>
         <input type="text" class="form-control" id="title" name="title" value="<?php echo $_GET['title']; ?>" />
-    </div>
 
-    <div class=" form-group">
+        <br>
+
         <label for="text">Release year</label>
         <input type="text" class="form-control" id="year" name="year" value="<?php echo $_GET['year']; ?>" />
-    </div>
 
-    <div class=" form-group">
+        <br>
+
         <label for="text">Rating (from 1 to 10)</label>
         <input type="text" class="form-control" id="rating" name="rating" value="<?php echo $_GET['rating']; ?>" />
-    </div>
 
-    <div class=" form-group">
+        <br>
+
         <label for="text">Review</label>
         <input type="text" class="form-control" id="review" name="review" value="<?php echo $_GET['review']; ?>" />
     </div>

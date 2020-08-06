@@ -29,24 +29,42 @@
 
 
     $message = "Do you want to delete this user?";
-    $successMessage = 'User deleted correctly';
+    $successMessage = 'deleted successfully';
     $errorMessage = "Error !! User couldn´t be deleted";
 
 
-    $id = $_GET['id'];
-    $username = $_GET['username'];
-    $mail = $_GET['mail'];
-    $password = $_GET['password'];
 
     if (isset($_POST['delete'])) {
 
-        $sql = "DELETE FROM albums  WHERE username='$username'";
+        $id = $_GET['id'];
+        $username = $_GET['username'];
+        $mail = $_GET['mail'];
+        $password = $_GET['password'];
+        
+
+        $sql = "DELETE FROM users  WHERE id='$id'";
 
         $resultat = $connection->prepare($sql);
 
         $resultat->execute(array($id, $username, $mail, $password));
 
         if ($resultat) {
+
+            echo " <div class='alert alert-danger' role='alert'>
+                 <button type='button' class='close' data-dismiss='alert'>&times;</button>
+                 <h3 id='message'> $username $successMessage !</h3>
+                 </div>
+                 <footer><i class='fas fa-copyright'></i> 2020 Sergi Sánchez </footer>";
+
+            header("refresh:10;url=adminOptions.php");
+        } else {
+            echo " <div class='alert alert-danger' role='alert'>
+                 <button type='button' class='close' data-dismiss='alert'>&times;</button>
+                 <h3 id='message'> $errorMessage !</h3>
+                 </div>
+                 <footer><i class='fas fa-copyright'></i> 2020 Sergi Sánchez </footer>";
+
+            header("refresh:5;url=adminOptions.php");
         }
     }
 
@@ -67,18 +85,34 @@
         <h3>Are you sure you want to delete this user?</h3>
 
         <div class="form-group">
-            <label for="banda">ID</label>
-            <input type="text" class="form-control" id="id" name="id" readonly value="<?php echo $_GET['id']; ?>" />
-        </div>
-        <div class="form-group">
-            <label for="user">Username</label>
-            <input type="text" class="form-control" id="user" name="user" value="<?php echo $_GET['username']; ?>" />
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id" value="<?php echo $_GET['id']; ?>" />
+            <br>
+
+            <label for="author">Username</label>
+            <input type="text" class="form-control" id="username" name="username" value="<?php echo $_GET['username']; ?>" />
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="mail" name="mail" value="<?php echo $_GET['mail']; ?>" />
+            <br>
+
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="pass" name="pass" value="<?php echo $_GET['password']; ?>" />
+            <br>
+   
         </div>
 
-        <button type="submit" class="btn btn-info" name="delete" id="delete">Delete</button>
+        <button type="submit" class="btn btn-info" name="delete" id="erase">Delete</button>
+
 
     </form>
 
+
+    <!--BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 
 </body>

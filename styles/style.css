@@ -146,7 +146,9 @@ body nav {
   margin: auto;
 }
 
-body .alert {
-  margin: auto;
+body #erase {
+  margin-left: 475px;
+  margin-bottom: 100px;
+  width: 26%;
 }
 /*# sourceMappingURL=style.css.map */

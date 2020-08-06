@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="mx-auto">
                         <a href="adminUsers.php" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult users</a>
-                        <a href="consultReview.php" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult reviews</a>
+                        <a href="adminReviews.php" type="button" id="botoOpcions" class="btn btn-link btn-lg">Consult reviews</a>
                     </div>
                 </div>
             </div>
