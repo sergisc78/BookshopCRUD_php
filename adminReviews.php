@@ -54,7 +54,7 @@
                 <td>" . $resultats['rating'] . "</td>
                 <td>" . $resultats['review'] . "</td>
                 
-                <td><a href='deleteReview.php?id=$resultats[id] & author=$resultats[author] & mail=$resultats[title] & password=$resultats[year] & password=$resultats[rating] & password=$resultats[review] type='button' class='btn btn-info btn-sm'>Delete review</a></td>";
+                <td><a href='deleteReview.php?id=$resultats[id] & author=$resultats[author] & title=$resultats[title] & year=$resultats[year] & rating=$resultats[rating] & review=$resultats[review]' type='button' class='btn btn-info btn-sm'>Delete review</a></td>";
             }
 
             echo "<nav class='nav'>

@@ -52,7 +52,7 @@
                 <td>" . $resultats['mail'] . " </td>
                 <td>" . $resultats['password'] . "</td>
                 
-                <td><a href='deleteUser.php?id=$resultats[id] & username=$resultats[username] & mail=$resultats[mail] & password=$resultats[password] type='button' class='btn btn-info btn-sm'>Delete user</a></td>";
+                <td><a href='deleteUser.php?id=$resultats[id] & username=$resultats[username] & mail=$resultats[mail] & password=$resultats[password]' type='button' class='btn btn-info btn-sm'>Delete user</a></td>";
             }
 
             echo "<nav class='nav'>

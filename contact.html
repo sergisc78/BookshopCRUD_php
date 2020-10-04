@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop</title>
+
+     <!--BOOTSTRAP CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+     <!-- CSS -->
+     <link rel="stylesheet" href="styles/style.css"> 
+
+     <!--GOOGLE FONTS-->
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+
+     <!--FONT AWESOME -->
+     <link rel="stylesheet" href="src/fontawesome-free-5.13.1-web/css/all.min.css">
+</head>
+<body>
+    <body>
+        <div class="card">
+          <div class="card-body">
+            <h1>Bookshop</h1>
+          </div>
+        </div>
+        <nav class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" title="Back to index"
+              ><i class="fas fa-arrow-left"></i
+            ></a>
+          </li>
+        </nav>
+
+        <h3>Contact us</h3>
+    <form class="needs-validation" action="login.php" method="POST" novalidate>
+        <div class="form-group">
+          <label for="validationCustom01">Email</label>
+          <input type="email" class="form-control" id="validationCustom01" name="email" placeholder="Enter your your email" required><br>
+          <div class="invalid-feedback">
+            Please enter an email.
+          </div>
+
+<label for="validationCustom05">Why do you want to contact us ?</label><br />
+        <textarea rows="5" cols="35" name="review" required> </textarea>
+        <br />
+        <div class="invalid-feedback">
+          Please,write something 
+        </div>
+
+        <br />
+        <button class="btn btn-info" type="submit" name="send">Send</button>
+</div>
+
+<footer><i class="fas fa-copyright"></i> 2020 Sergi Sánchez</footer>
+</body>
+</html>

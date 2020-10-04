@@ -37,22 +37,24 @@
     if (isset($_POST['delete'])) {
 
         $id = $_GET['id'];
-        $username = $_GET['username'];
-        $mail = $_GET['mail'];
-        $password = $_GET['password'];
-        
+        $author = $_GET['author'];
+        $title = $_GET['title'];
+        $year = $_GET['year'];
+        $rating = $_GET['rating'];
+        $review = $_GET['review'];
 
-        $sql = "DELETE FROM users  WHERE id='$id'";
+
+        $sql = "DELETE FROM reviews  WHERE id='$id'";
 
         $resultat = $connection->prepare($sql);
 
-        $resultat->execute(array($id, $username, $mail, $password));
+        $resultat->execute(array($id, $author, $title, $year, $rating, $review));
 
         if ($resultat) {
 
             echo " <div class='alert alert-danger' role='alert'>
                  <button type='button' class='close' data-dismiss='alert'>&times;</button>
-                 <h3 id='message'> $username $successMessage !</h3>
+                 <h3 id='message'> $title $successMessage !</h3>
                  </div>
                  <footer><i class='fas fa-copyright'></i> 2020 Sergi Sánchez </footer>";
 
@@ -82,26 +84,35 @@
     </nav>
 
     <form action="" method="post">
-        <h3>Are you sure you want to delete this user?</h3>
+        <h3>Are you sure you want to delete this review?</h3>
 
         <div class="form-group">
             <label for="id">ID</label>
-            <input type="text" class="form-control" id="id" name="id" value="<?php echo $_GET['id']; ?>" />
+            <input type="text" class="form-control" id="id" name="id" readonly value="<?php echo $_GET['id']; ?>" />
             <br>
 
-            <label for="author">Username</label>
-            <input type="text" class="form-control" id="username" name="username" value="<?php echo $_GET['username']; ?>" />
+            <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" name="author" value="<?php echo $_GET['author']; ?>" />
             <br>
 
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="mail" name="mail" value="<?php echo $_GET['mail']; ?>" />
+            <label for="titol">Title</label>
+            <input type="text" class="form-control" id="title" name="title" value="<?php echo $_GET['title']; ?>" />
+
             <br>
 
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="pass" name="pass" value="<?php echo $_GET['password']; ?>" />
+            <label for="text">Release year</label>
+            <input type="text" class="form-control" id="year" name="year" value="<?php echo $_GET['year']; ?>" />
+
             <br>
-   
-        </div>
+
+            <label for="text">Rating (from 1 to 10)</label>
+            <input type="text" class="form-control" id="rating" name="rating" value="<?php echo $_GET['rating']; ?>" />
+
+            <br>
+
+            <label for="text">Review</label>
+            <input type="text" class="form-control" id="review" name="review" value="<?php echo $_GET['review']; ?>" />
+        </div><br>
 
         <button type="submit" class="btn btn-info" name="delete" id="erase">Delete</button>
 
